@@ -1,0 +1,289 @@
+/*
+ * Paleta de Colores y Estilos Globales para Verde Suculenta
+ */
+
+/* 1. Definición de la paleta de colores como variables CSS */
+:root {
+    --primary-color: rgb(255, 250, 229);
+    --secondary-color: #3498db;
+    --accent-color: #e74c3c;
+    --light-color: rgb(231, 223, 191);
+    --dark-color: rgb(40, 68, 122);
+    --succulent-green-dark: #2E7D32;   /* Verde oscuro para texto, pie de página */
+    --succulent-green-medium: #4CAF50; /* Verde medio para botones, enlaces, acentos */
+    --succulent-green-light: #C8E6C9;  /* Verde claro para fondos, resaltados */
+    --off-white: #F8F9FA;              /* Blanco roto para el fondo principal */
+    --text-muted: #6c757d;             /* Gris para texto secundario */
+    --brownish: rgb(145, 135, 130)
+}
+/* 2. Estilos globales y sobreescrituras de Bootstrap */
+body {
+    font-family: "Pixelify Sans", sans-serif;
+    background-color: var(--primary-color);
+    scroll-behavior: smooth;
+}
+
+/* Sobreescritura de los colores primarios de Bootstrap */
+.btn-primary {
+    background-color: var(--succulent-green-medium);
+    border-color: var(--succulent-green-medium);
+}
+
+.btn-primary:hover {
+    background-color: var(--succulent-green-dark);
+    border-color: var(--succulent-green-dark);
+}
+
+.text-primary {
+    color: rgb(40, 68, 122)!important;
+}
+
+.text-custom{
+    color: rgb(227, 207, 59)!important;
+}
+
+.text-white{
+    color: lightgray!important;
+}
+
+a {
+    color: var(--succulent-green-medium);
+}
+
+a:hover {
+    color: var(--succulent-green-dark);
+}
+.carousel-inner{
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  margin-left: 0rem;
+  margin-right: 0rem;
+  max-width: 1660px;
+  max-height: 1080px;
+}
+
+.misvis{
+    background-color: rgb(250, 243, 234);
+    padding-top: 0.5rem;
+    padding-bottom: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    text-align: center;
+}
+
+.icon-container {
+            width: 64px;
+            height: 64px;
+            margin-left:25%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 6px;
+        }
+
+.card:hover {
+            transform: translateY(-5px);
+        }
+
+.feature-icon {
+            font-size: 2.5rem;
+            color: #28a745;
+            margin-bottom: 1rem;
+        }
+
+.navbar{
+    background-color: rgb(255, 250, 229);
+}
+
+.nav-item{
+    font-size: 20px;
+}
+.navbar {
+    background-color: var(--light-color);
+    padding: 0 0 0 0;
+    transition: all 0.3s ease;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: var(--light-color) !important;
+}
+
+.nav-link {
+    color: var(--dark-color) !important;
+    font-weight: 500;
+    margin: 0 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--secondary-color) !important;
+}   
+.hero-section {
+    padding: 100px 0 50px;
+    background-image: url('/images/placeholder.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    position: relative;
+    max-height: 10%;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
+  z-index: 1;
+}
+
+/* Make sure content stays above the overlay */
+.hero-section > * {
+  position: relative;
+  z-index: 2;
+}
+
+.carousel-item {
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+}
+
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.section-title {
+    position: relative;
+    margin-bottom: 2rem;
+    padding-bottom: 0.5rem;
+    text-align: center;
+}
+
+.section-title:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: var(--secondary-color);
+}
+
+.mission-section {
+    padding: 80px 0;
+    background-color: var(--primary-color);
+}
+
+.shop-section, .designer-section {
+    padding: 80px 0;
+    background-color: var(--off-white);
+}
+
+.card {
+    border: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    margin-bottom: 30px;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.btn-primary {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    padding: 10px 25px;
+    font-weight: 600;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.footer {
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    padding: 60px 0 30px;
+}
+
+.footer h5 {
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.footer h5:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background-color: var(--secondary-color);
+}
+
+.footer-links a {
+    color: var(--light-color);
+    text-decoration: none;
+    display: block;
+    margin-bottom: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--secondary-color);
+}
+
+.social-icons a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    margin-right: 10px;
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-5px);
+}
+
+.copyright {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+    margin-top: 40px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .carousel-item {
+        height: 300px;
+    }
+    
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+    .hero-section h2{
+        font-size: 1.5rem;
+    }
+}
+
+.lead{
+    text-align: center;
+}
