@@ -124,7 +124,7 @@ a:hover {
 }   
 .hero-section {
     padding: 100px 0 50px;
-    background-image: url('/images/placeholder.png');
+    background-image: url('./images/placeholder.png');
     background-size: cover;
     background-position: center;
     color: white;
